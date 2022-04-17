@@ -1,14 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --primary-background-color: #333333;
+  /* --primary-background-color: #00ff00; */
+  --primary-color: #112a46;
+  --secondary-background-color: #0ebe0e74;
+}
+
 html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: "Comfortaa", cursive;
+  background-color: var(--primary-background-color);
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
 .container {
-  max-width: 120rem;
+  max-width: 125rem;
   margin: 0 auto;
+  padding: 1rem 1rem;
+  height: 95vh;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+.navigation {
+  height: 10vh;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+.logo-container img {
+  height: 5rem;
+  width: auto;
+}
+
+.project-navigation-and-todo-card-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.project-navigation,
+.projects-navigation-list {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.todo-cards {
+  height: 85vh;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.todo-card {
+  border-bottom: 0.5rem solid black;
+  padding: 1rem;
+}
+
+.add-task-button button {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  color: #f8dada;
+}
+
+.add-todo-form {
+  border: 0.1rem solid rgb(186, 186, 186);
+  border-radius: 1.5rem;
+}
+
+.form {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form > input,
+.form > select,
+.form > textarea,
+.lower-bottom-form input,
+.lower-bottom-form select {
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.lower-bottom-form {
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  display: flex;
+  gap: 1rem;
 }

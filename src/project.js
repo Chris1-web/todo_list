@@ -1,25 +1,40 @@
 import Todo from "./todo";
 
 const getProjectName = (data) => ({
-  projectTitle: () => data.projectName,
+  projectName: data.projectName,
 });
 
-// const Project = function (projectName = "Welcome") {
-//   const tasks = [];
-//   const addTask = function (task) {
-//     tasks.push(task);
-//   };
-//   return Object.assign({}, { createTodo }, { addTask, projectName, tasks });
-// };
+const listTasks = (data) => {
+  // get data in all tasks array and log out individual todos
+  const listProjectTask = function () {
+    data.allTasks.forEach(function (todo) {
+      console.log(todo);
+    });
+  };
+  return { listProjectTask };
+};
+const addTodo = () => ({
+  addTodo: (title, description, due_date, priority) =>
+    Todo(title, description, due_date, priority),
+});
 
-// const Project = function (projectName = "Welcome") {};
+const addTask = (data) => ({
+  addTask: (task) => data.allTasks.push(task),
+});
 
 const Project = function (projectName = "Welcome") {
-  const tasks = [];
+  const allTasks = [];
   const data = {
     projectName,
+    allTasks,
   };
-  return Object.assign({}, getProjectName(data), { Todo });
+  return Object.assign(
+    {},
+    getProjectName(data),
+    listTasks(data),
+    addTask(data),
+    addTodo()
+  );
 };
 
 export default Project;

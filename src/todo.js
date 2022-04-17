@@ -1,34 +1,29 @@
 const getTitle = (data) => ({
-  title: () => data.title,
+  title: data.title,
 });
 const getDescription = (data) => ({
-  description: () => data.description,
+  description: data.description,
 });
 const getDueDate = (data) => ({
-  due_date: () => data.due_date,
+  due_date: data.due_date,
 });
 const getPriority = (data) => ({
-  priority: () => data.priority,
-});
-const getStatus = (data) => ({
-  status: () => data.status,
+  priority: data.priority,
 });
 
-const Todo = function (title, description, due_date, priority, status) {
+const Todo = function (title, description, due_date, priority) {
   const data = {
     title,
     description,
     due_date,
     priority,
-    status,
   };
   return Object.assign(
     {},
     getTitle(data),
     getDescription(data),
     getDueDate(data),
-    getPriority(data),
-    getStatus(data)
+    getPriority(data)
   );
 };
 
