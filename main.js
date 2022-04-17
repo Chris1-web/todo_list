@@ -20,8 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nhtml {\n  font-size: 62.5%;\n}\n\n.container {\n  max-width: 120rem;\n  margin: 0 auto;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/styles.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;EACjB,cAAc;AAChB","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nhtml {\n  font-size: 62.5%;\n}\n\n.container {\n  max-width: 120rem;\n  margin: 0 auto;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n:root {\n  --primary-background-color: #333333;\n  /* --primary-background-color: #00ff00; */\n  --primary-color: #112a46;\n  --secondary-background-color: #0ebe0e74;\n}\n\nhtml {\n  font-size: 62.5%;\n}\n\nbody {\n  font-family: \"Comfortaa\", cursive;\n  background-color: var(--primary-background-color);\n  color: white;\n}\n\nul {\n  list-style: none;\n}\n\n.container {\n  max-width: 125rem;\n  margin: 0 auto;\n  padding: 1rem 1rem;\n  height: 95vh;\n}\n\n.content {\n  display: grid;\n  grid-template-rows: 1fr 4fr;\n}\n\n.navigation {\n  height: 10vh;\n}\n\n.logo-container {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  font-size: 2rem;\n  color: white;\n}\n.logo-container img {\n  height: 5rem;\n  width: auto;\n}\n\n.project-navigation-and-todo-card-container {\n  display: grid;\n  grid-template-columns: 1fr 4fr;\n}\n\n.project-navigation,\n.projects-navigation-list {\n  font-size: 2rem;\n  display: flex;\n  flex-direction: column;\n  gap: 2rem;\n  padding: 1rem 0;\n}\n\n.todo-cards {\n  height: 85vh;\n  overflow: scroll;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  padding: 0 2rem;\n}\n\n.todo-card {\n  border-bottom: 0.5rem solid black;\n  padding: 1rem;\n}\n\n.add-task-button button {\n  padding: 1rem 2rem;\n  cursor: pointer;\n  font-size: 2rem;\n  background-color: transparent;\n  border: none;\n  color: #f8dada;\n}\n\n.add-todo-form {\n  border: 0.1rem solid rgb(186, 186, 186);\n  border-radius: 1.5rem;\n}\n\n.form {\n  font-size: 1.4rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.form > input,\n.form > select,\n.form > textarea,\n.lower-bottom-form input,\n.lower-bottom-form select {\n  padding: 1rem;\n  border: none;\n  outline: none;\n  background-color: transparent;\n}\n\n.lower-bottom-form {\n  border: none;\n  outline: none;\n  font-size: 1.4rem;\n  display: flex;\n  gap: 1rem;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/styles.css"],"names":[],"mappings":"AAEA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;EACE,mCAAmC;EACnC,yCAAyC;EACzC,wBAAwB;EACxB,uCAAuC;AACzC;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,iCAAiC;EACjC,iDAAiD;EACjD,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;EACjB,cAAc;EACd,kBAAkB;EAClB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,2BAA2B;AAC7B;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,SAAS;EACT,eAAe;EACf,YAAY;AACd;AACA;EACE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,aAAa;EACb,8BAA8B;AAChC;;AAEA;;EAEE,eAAe;EACf,aAAa;EACb,sBAAsB;EACtB,SAAS;EACT,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,gBAAgB;EAChB,aAAa;EACb,sBAAsB;EACtB,SAAS;EACT,eAAe;AACjB;;AAEA;EACE,iCAAiC;EACjC,aAAa;AACf;;AAEA;EACE,kBAAkB;EAClB,eAAe;EACf,eAAe;EACf,6BAA6B;EAC7B,YAAY;EACZ,cAAc;AAChB;;AAEA;EACE,uCAAuC;EACvC,qBAAqB;AACvB;;AAEA;EACE,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,SAAS;AACX;;AAEA;;;;;EAKE,aAAa;EACb,YAAY;EACZ,aAAa;EACb,6BAA6B;AAC/B;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,iBAAiB;EACjB,aAAa;EACb,SAAS;AACX","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap\");\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n:root {\n  --primary-background-color: #333333;\n  /* --primary-background-color: #00ff00; */\n  --primary-color: #112a46;\n  --secondary-background-color: #0ebe0e74;\n}\n\nhtml {\n  font-size: 62.5%;\n}\n\nbody {\n  font-family: \"Comfortaa\", cursive;\n  background-color: var(--primary-background-color);\n  color: white;\n}\n\nul {\n  list-style: none;\n}\n\n.container {\n  max-width: 125rem;\n  margin: 0 auto;\n  padding: 1rem 1rem;\n  height: 95vh;\n}\n\n.content {\n  display: grid;\n  grid-template-rows: 1fr 4fr;\n}\n\n.navigation {\n  height: 10vh;\n}\n\n.logo-container {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  font-size: 2rem;\n  color: white;\n}\n.logo-container img {\n  height: 5rem;\n  width: auto;\n}\n\n.project-navigation-and-todo-card-container {\n  display: grid;\n  grid-template-columns: 1fr 4fr;\n}\n\n.project-navigation,\n.projects-navigation-list {\n  font-size: 2rem;\n  display: flex;\n  flex-direction: column;\n  gap: 2rem;\n  padding: 1rem 0;\n}\n\n.todo-cards {\n  height: 85vh;\n  overflow: scroll;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  padding: 0 2rem;\n}\n\n.todo-card {\n  border-bottom: 0.5rem solid black;\n  padding: 1rem;\n}\n\n.add-task-button button {\n  padding: 1rem 2rem;\n  cursor: pointer;\n  font-size: 2rem;\n  background-color: transparent;\n  border: none;\n  color: #f8dada;\n}\n\n.add-todo-form {\n  border: 0.1rem solid rgb(186, 186, 186);\n  border-radius: 1.5rem;\n}\n\n.form {\n  font-size: 1.4rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.form > input,\n.form > select,\n.form > textarea,\n.lower-bottom-form input,\n.lower-bottom-form select {\n  padding: 1rem;\n  border: none;\n  outline: none;\n  background-color: transparent;\n}\n\n.lower-bottom-form {\n  border: none;\n  outline: none;\n  font-size: 1.4rem;\n  display: flex;\n  gap: 1rem;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -530,6 +531,83 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/loadImages.js":
+/*!***************************!*\
+  !*** ./src/loadImages.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _icons_logo_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./icons/logo.png */ "./src/icons/logo.png");
+
+
+const loadImages = function () {
+  const logoIcon = document.querySelector(".logo-icon");
+  logoIcon.setAttribute("src", _icons_logo_png__WEBPACK_IMPORTED_MODULE_0__);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadImages);
+
+
+/***/ }),
+
+/***/ "./src/logics.js":
+/*!***********************!*\
+  !*** ./src/logics.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createNewTodo": () => (/* binding */ createNewTodo),
+/* harmony export */   "createProject": () => (/* binding */ createProject),
+/* harmony export */   "displayTodo": () => (/* binding */ displayTodo)
+/* harmony export */ });
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/project.js");
+
+
+const createProject = function (projectName = "Welcome") {
+  const newProject = (0,_project__WEBPACK_IMPORTED_MODULE_0__["default"])(projectName);
+  return newProject;
+};
+
+const createNewTodo = function (
+  project,
+  title,
+  description,
+  due_date,
+  priority
+) {
+  const todoProject = project;
+  const projectTodo = todoProject.addTodo(
+    title,
+    description,
+    due_date,
+    priority
+  );
+  todoProject.addTask(projectTodo);
+  return projectTodo;
+};
+
+const displayTodo = function (project) {
+  const projectContainer = project;
+  projectContainer.listProjectTask();
+};
+
+const editProject = function () {};
+
+const editTodo = function () {};
+
+const deleteTodo = function () {};
+
+
+
+
+/***/ }),
+
 /***/ "./src/project.js":
 /*!************************!*\
   !*** ./src/project.js ***!
@@ -544,25 +622,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const getProjectName = (data) => ({
-  projectTitle: () => data.projectName,
+  projectName: data.projectName,
 });
 
-// const Project = function (projectName = "Welcome") {
-//   const tasks = [];
-//   const addTask = function (task) {
-//     tasks.push(task);
-//   };
-//   return Object.assign({}, { createTodo }, { addTask, projectName, tasks });
-// };
+const listTasks = (data) => {
+  // get data in all tasks array and log out individual todos
+  const listProjectTask = function () {
+    data.allTasks.forEach(function (todo) {
+      console.log(todo);
+    });
+  };
+  return { listProjectTask };
+};
+const addTodo = () => ({
+  addTodo: (title, description, due_date, priority) =>
+    (0,_todo__WEBPACK_IMPORTED_MODULE_0__["default"])(title, description, due_date, priority),
+});
 
-// const Project = function (projectName = "Welcome") {};
+const addTask = (data) => ({
+  addTask: (task) => data.allTasks.push(task),
+});
 
 const Project = function (projectName = "Welcome") {
-  const tasks = [];
+  const allTasks = [];
   const data = {
     projectName,
+    allTasks,
   };
-  return Object.assign({}, getProjectName(data), { Todo: _todo__WEBPACK_IMPORTED_MODULE_0__["default"] });
+  return Object.assign(
+    {},
+    getProjectName(data),
+    listTasks(data),
+    addTask(data),
+    addTodo()
+  );
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Project);
@@ -581,41 +674,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const getTitle = (data) => ({
-  title: () => data.title,
+  title: data.title,
 });
 const getDescription = (data) => ({
-  description: () => data.description,
+  description: data.description,
 });
 const getDueDate = (data) => ({
-  due_date: () => data.due_date,
+  due_date: data.due_date,
 });
 const getPriority = (data) => ({
-  priority: () => data.priority,
-});
-const getStatus = (data) => ({
-  status: () => data.status,
+  priority: data.priority,
 });
 
-const Todo = function (title, description, due_date, priority, status) {
+const Todo = function (title, description, due_date, priority) {
   const data = {
     title,
     description,
     due_date,
     priority,
-    status,
   };
   return Object.assign(
     {},
     getTitle(data),
     getDescription(data),
     getDueDate(data),
-    getPriority(data),
-    getStatus(data)
+    getPriority(data)
   );
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Todo);
 
+
+/***/ }),
+
+/***/ "./src/icons/logo.png":
+/*!****************************!*\
+  !*** ./src/icons/logo.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "a8d20cd48e2e0d022083.png";
 
 /***/ })
 
@@ -670,6 +768,18 @@ const Todo = function (title, description, due_date, priority, status) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -686,6 +796,26 @@ const Todo = function (title, description, due_date, priority, status) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
@@ -695,58 +825,103 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/styles.css */ "./src/styles/styles.css");
-/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project */ "./src/project.js");
+/* harmony import */ var _loadImages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loadImages */ "./src/loadImages.js");
+/* harmony import */ var _logics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logics */ "./src/logics.js");
 
 
 
-const project1 = (0,_project__WEBPACK_IMPORTED_MODULE_1__["default"])();
-const todo1 = project1.Todo(
+
+// const project1 = Project();
+// // const todo1 = project1.addTodo(
+// //   "charge my phone",
+// //   "I need to charge my phone as soon as the light comes on",
+// //   "02/2022",
+// //   "low"
+// // );
+
+// const todo2 = project1.addTodo(
+//   "charge my laptop",
+//   "I need to charge as soon as the light comes on. yep",
+//   "12/2020",
+//   "high"
+// );
+// const todo3 = project1.addTodo(
+//   "climb the ladder",
+//   "watch a movie about climbing the ladder",
+//   "12/2022",
+//   "medium"
+// );
+// const todo4 = project1.addTodo(
+//   "Watch NBA playoff",
+//   "Watch the NBA playoff on ESPN DStv",
+//   "15/2022",
+//   "high"
+// );
+
+// console.log(todo1.title);
+// console.log(todo1.description);
+// console.log(todo1.due_date);
+// console.log(project1);
+// project1.addTask(todo1);
+// project1.addTask(todo2);
+// project1.addTask(todo3);
+// project1.addTask(todo4);
+// project1.listProjectTask();
+
+// const project2 = Project("Personal");
+// const todoOne = project2.addTodo(
+//   "charge my phone two",
+//   "I need to charge my phone as soon as the light comes on",
+//   "02/2022",
+//   "low"
+// );
+
+// const todoTwo = project2.addTodo(
+//   "charge my laptop two",
+//   "I need to charge as soon as the light comes on. yep",
+//   "12/2020",
+//   "high"
+// );
+// const todoThree = project2.addTodo(
+//   "climb the ladder two",
+//   "watch a movie about climbing the ladder",
+//   "12/2022",
+//   "medium"
+// );
+// const todoFour = project2.addTodo(
+//   "Watch NBA playoff two",
+//   "Watch the NBA playoff on ESPN DStv",
+//   "15/2022",
+//   "high"
+// );
+
+// console.log(project2);
+// project2.addTask(todoOne);
+// project2.addTask(todoTwo);
+// project2.addTask(todoThree);
+// project2.addTask(todoFour);
+// project2.listProjectTask();
+
+const project1 = (0,_logics__WEBPACK_IMPORTED_MODULE_2__.createProject)();
+console.log(project1);
+(0,_logics__WEBPACK_IMPORTED_MODULE_2__.createNewTodo)(
+  project1,
   "charge my phone",
   "I need to charge my phone as soon as the light comes on",
   "02/2022",
-  "low",
-  false
+  "low"
 );
+(0,_logics__WEBPACK_IMPORTED_MODULE_2__.createNewTodo)(
+  project1,
+  "call a friend",
+  "Need to call a friend to catch up with old times",
+  "02/2023",
+  "high"
+);
+(0,_logics__WEBPACK_IMPORTED_MODULE_2__.displayTodo)(project1);
 
-console.log(todo1.title());
-console.log(todo1.description());
-console.log(todo1.due_date());
-
-// const todo1 = Todo(
-//   "charge my phone",
-//   "I need to charge my phone as soon as the light comes on",
-//   "02/2022",
-//   "low",
-//   false
-// );
-// console.log(todo1);
-
-// import { Project } from "./todo";
-
-// // create project
-// const project1 = Project();
-// const project2 = Project("Personal");
-// // create todo in project
-// const project1Todo = project1.createTodo(
-//   "charge my phone",
-//   "I need to charge my phone as soon as the light comes on",
-//   "02/2022",
-//   "low",
-//   false
-// );
-// project1.addTask(project1Todo);
-// const project1Todo2 = project1.createTodo(
-//   "charge my laptop",
-//   "I need to charge as soon as the light comes on",
-//   "12/2020",
-//   "high",
-//   true
-// );
-// project1.addTask(project1Todo2);
-// console.log(project1);
-// console.log(project1Todo);
-// console.log(project1Todo2);
-// console.log(project1.tasks);
+// load all images on page
+(0,_loadImages__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
 })();
 
