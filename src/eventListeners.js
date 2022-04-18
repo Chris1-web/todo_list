@@ -7,7 +7,6 @@ const addNewProjectForm = document.querySelector(".add-project-form");
 const addNewProjectBtn = document.querySelector(".project-plus");
 const cancelNewTaskBtn = document.querySelector("#form-cancel-btn");
 const cancelNewProjectBtn = document.querySelector(".cancel-project-btn");
-let currentProject = createProject("Welcome");
 
 const showNewTodoForm = function () {
   addTaskBtn.addEventListener("click", function () {
@@ -15,6 +14,7 @@ const showNewTodoForm = function () {
     addTaskBtn.classList.add("hide");
   });
   addNewTodoForm.addEventListener("submit", function (e) {
+    let currentProject = createProject("Welcome");
     e.preventDefault();
     const title = document.querySelector("#title").value.trim();
     const description = document
@@ -61,9 +61,7 @@ const showNewTodoForm = function () {
     document.querySelector("#project-name").value = "";
     cancelNewProjectBtn.click();
     // create a new project
-    const newProject = createProject(title);
-    projectListHTML(title);
-    console.log(newProject);
+    createProject(title);
   });
 };
 

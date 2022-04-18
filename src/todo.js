@@ -1,5 +1,3 @@
-import { todoCardHTML } from "./UIView";
-
 const getTitle = (data) => ({
   title: data.title,
 });

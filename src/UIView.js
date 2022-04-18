@@ -18,7 +18,6 @@ const todoCardHTML = function (todoData) {
           <img class="delete-icon" alt="delete icon" />
         </div>
       </div>
-      <h2 class="todo-title">${todoData.title}</h2>
       <p class="todo-description">
         ${todoData.description}
       </p>
