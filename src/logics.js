@@ -12,7 +12,7 @@ const createNewTodo = function (
   due_date,
   priority
 ) {
-  const todoProject = project;
+  const todoProject = project; //project function
   const projectTodo = todoProject.addTodo(
     title,
     description,
@@ -26,6 +26,11 @@ const createNewTodo = function (
 const displayTodo = function (project) {
   const projectContainer = project;
   projectContainer.listProjectTask();
+};
+
+const displayProjectList = function (project) {
+  // const projectContainer = project;
+  // projectContainer.listProjectTask();
 };
 
 const editProject = function () {};

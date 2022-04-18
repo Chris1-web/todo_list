@@ -7,22 +7,32 @@ const homePageHTML = function () {
   const html = ``;
 };
 
-const todoCardHTML = function () {
+const todoCardHTML = function (todoData) {
   const parent = "todo-cards";
   const html = `
     <div class="todo-card">
-      <h2 class="todo-title">Lorem ipsum dolor</h2>
+      <div class="top">
+        <h2 class="todo-title">${todoData.title}</h2>
+        <div class="right-todo-nav">
+          <img class="edit-icon" alt="edit icon" />
+          <img class="delete-icon" alt="delete icon" />
+        </div>
+      </div>
+      <h2 class="todo-title">${todoData.title}</h2>
       <p class="todo-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-        cum! Sint veritatis molestiae, sapiente vel dignissimos repellat
-        reiciendis voluptatibus sit facere est? Veritatis eos, neque
-        nostrum alias sequi quae unde. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Aliquid nemo unde dicta accusamus
-        voluptatum sed sequi labore sapiente cum doloremque pariatur non,
-        dignissimos nulla odit rerum tempore! Possimus, aliquam quidem.
+        ${todoData.description}
       </p>
     </div>
   `;
+  insertHTML(parent, "beforeend", html);
 };
 
-export { insertHTML, todoCardHTML };
+const projectListHTML = function (projectName) {
+  const parent = "projects-navigation-list";
+  const html = `
+    <li class="project">${projectName}</li>
+  `;
+  insertHTML(parent, "beforeend", html);
+};
+
+export { insertHTML, todoCardHTML, projectListHTML };

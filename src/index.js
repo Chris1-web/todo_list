@@ -92,6 +92,4 @@ createNewTodo(
 );
 displayTodo(project1);
 
-// load all images on page
-loadImages();
 showNewTodoForm();
