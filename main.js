@@ -713,7 +713,6 @@ const todoCardHTML = function (todoData) {
           <img class="delete-icon" alt="delete icon" />
         </div>
       </div>
-      <h2 class="todo-title">${todoData.title}</h2>
       <p class="todo-description">
         ${todoData.description}
       </p>
@@ -756,7 +755,6 @@ const addNewProjectForm = document.querySelector(".add-project-form");
 const addNewProjectBtn = document.querySelector(".project-plus");
 const cancelNewTaskBtn = document.querySelector("#form-cancel-btn");
 const cancelNewProjectBtn = document.querySelector(".cancel-project-btn");
-let currentProject = (0,_logics__WEBPACK_IMPORTED_MODULE_0__.createProject)("Welcome");
 
 const showNewTodoForm = function () {
   addTaskBtn.addEventListener("click", function () {
@@ -764,6 +762,7 @@ const showNewTodoForm = function () {
     addTaskBtn.classList.add("hide");
   });
   addNewTodoForm.addEventListener("submit", function (e) {
+    let currentProject = (0,_logics__WEBPACK_IMPORTED_MODULE_0__.createProject)("Welcome");
     e.preventDefault();
     const title = document.querySelector("#title").value.trim();
     const description = document
@@ -810,9 +809,7 @@ const showNewTodoForm = function () {
     document.querySelector("#project-name").value = "";
     cancelNewProjectBtn.click();
     // create a new project
-    const newProject = (0,_logics__WEBPACK_IMPORTED_MODULE_0__.createProject)(title);
-    (0,_UIView__WEBPACK_IMPORTED_MODULE_1__.projectListHTML)(title);
-    console.log(newProject);
+    (0,_logics__WEBPACK_IMPORTED_MODULE_0__.createProject)(title);
   });
 };
 
@@ -864,15 +861,21 @@ const loadImages = function () {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "allProjectsArray": () => (/* binding */ allProjectsArray),
 /* harmony export */   "createNewTodo": () => (/* binding */ createNewTodo),
 /* harmony export */   "createProject": () => (/* binding */ createProject),
 /* harmony export */   "displayTodo": () => (/* binding */ displayTodo)
 /* harmony export */ });
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/project.js");
+/* harmony import */ var _UIView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UIView */ "./src/UIView.js");
 
 
+
+const allProjectsArray = [];
 const createProject = function (projectName = "Welcome") {
   const newProject = (0,_project__WEBPACK_IMPORTED_MODULE_0__["default"])(projectName);
+  allProjectsArray.push(newProject);
+  displayProjectList();
   return newProject;
 };
 
@@ -899,9 +902,18 @@ const displayTodo = function (project) {
   projectContainer.listProjectTask();
 };
 
-const displayProjectList = function (project) {
-  // const projectContainer = project;
-  // projectContainer.listProjectTask();
+const displayProjectList = function () {
+  // clear current html
+  const parentContainer = document.querySelector(".projects-navigation-list");
+  parentContainer.textContent = "";
+  // learn first project example
+  (0,_UIView__WEBPACK_IMPORTED_MODULE_1__.projectListHTML)("Welcome");
+  parentContainer.firstElementChild.classList.add("active");
+  // create html for new html from project list array loop
+  allProjectsArray.forEach(function (project) {
+    (0,_UIView__WEBPACK_IMPORTED_MODULE_1__.projectListHTML)(project.projectName);
+    console.log(project);
+  });
 };
 
 const editProject = function () {};
@@ -994,9 +1006,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _UIView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UIView */ "./src/UIView.js");
-
-
 const getTitle = (data) => ({
   title: data.title,
 });
@@ -1169,104 +1178,31 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/styles.css */ "./src/styles/styles.css");
-/* harmony import */ var _loadImages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loadImages */ "./src/loadImages.js");
-/* harmony import */ var _logics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logics */ "./src/logics.js");
-/* harmony import */ var _eventListeners__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./eventListeners */ "./src/eventListeners.js");
+/* harmony import */ var _logics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logics */ "./src/logics.js");
+/* harmony import */ var _eventListeners__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./eventListeners */ "./src/eventListeners.js");
 
 
 
 
-
-// const project1 = Project();
-// // const todo1 = project1.addTodo(
-// //   "charge my phone",
-// //   "I need to charge my phone as soon as the light comes on",
-// //   "02/2022",
-// //   "low"
-// // );
-
-// const todo2 = project1.addTodo(
-//   "charge my laptop",
-//   "I need to charge as soon as the light comes on. yep",
-//   "12/2020",
-//   "high"
-// );
-// const todo3 = project1.addTodo(
-//   "climb the ladder",
-//   "watch a movie about climbing the ladder",
-//   "12/2022",
-//   "medium"
-// );
-// const todo4 = project1.addTodo(
-//   "Watch NBA playoff",
-//   "Watch the NBA playoff on ESPN DStv",
-//   "15/2022",
-//   "high"
-// );
-
-// console.log(todo1.title);
-// console.log(todo1.description);
-// console.log(todo1.due_date);
-// console.log(project1);
-// project1.addTask(todo1);
-// project1.addTask(todo2);
-// project1.addTask(todo3);
-// project1.addTask(todo4);
-// project1.listProjectTask();
-
-// const project2 = Project("Personal");
-// const todoOne = project2.addTodo(
-//   "charge my phone two",
-//   "I need to charge my phone as soon as the light comes on",
-//   "02/2022",
-//   "low"
-// );
-
-// const todoTwo = project2.addTodo(
-//   "charge my laptop two",
-//   "I need to charge as soon as the light comes on. yep",
-//   "12/2020",
-//   "high"
-// );
-// const todoThree = project2.addTodo(
-//   "climb the ladder two",
-//   "watch a movie about climbing the ladder",
-//   "12/2022",
-//   "medium"
-// );
-// const todoFour = project2.addTodo(
-//   "Watch NBA playoff two",
-//   "Watch the NBA playoff on ESPN DStv",
-//   "15/2022",
-//   "high"
-// );
-
-// console.log(project2);
-// project2.addTask(todoOne);
-// project2.addTask(todoTwo);
-// project2.addTask(todoThree);
-// project2.addTask(todoFour);
-// project2.listProjectTask();
-
-const project1 = (0,_logics__WEBPACK_IMPORTED_MODULE_2__.createProject)();
+const project1 = (0,_logics__WEBPACK_IMPORTED_MODULE_1__.createProject)("Personal");
 console.log(project1);
-(0,_logics__WEBPACK_IMPORTED_MODULE_2__.createNewTodo)(
+(0,_logics__WEBPACK_IMPORTED_MODULE_1__.createNewTodo)(
   project1,
   "charge my phone",
   "I need to charge my phone as soon as the light comes on",
   "02/2022",
   "low"
 );
-(0,_logics__WEBPACK_IMPORTED_MODULE_2__.createNewTodo)(
+(0,_logics__WEBPACK_IMPORTED_MODULE_1__.createNewTodo)(
   project1,
   "call a friend",
   "Need to call a friend to catch up with old times",
   "02/2023",
   "high"
 );
-(0,_logics__WEBPACK_IMPORTED_MODULE_2__.displayTodo)(project1);
+(0,_logics__WEBPACK_IMPORTED_MODULE_1__.displayTodo)(project1);
 
-(0,_eventListeners__WEBPACK_IMPORTED_MODULE_3__.showNewTodoForm)();
+(0,_eventListeners__WEBPACK_IMPORTED_MODULE_2__.showNewTodoForm)();
 
 })();
 
