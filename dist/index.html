@@ -13,16 +13,36 @@
           <img alt="todo logo icon" class="logo-icon" />
           <h2>TODO</h2>
         </div>
-        <div class="right-side-navigation"></div>
+        <div class="right-side-navigation">
+          <div class="add-task-button">
+            <button class="add-task-btn-nav">&plus; Add Task</button>
+          </div>
+        </div>
       </nav>
       <div class="project-navigation-and-todo-card-container">
         <aside class="project-navigation">
-          <h2>PROJECT <span class="downarrow">&#8595;</span></h2>
+          <div class="project-nav-header">
+            <h2>PROJECT</h2>
+            <button class="project-plus">&plus;</button>
+          </div>
           <ul class="projects-navigation-list">
-            <li>Welcome</li>
-            <li>Personal</li>
-            <li>Work</li>
+            <li class="project active">Welcome</li>
+            <li class="project">Personal</li>
+            <li class="project">Work</li>
           </ul>
+          <form class="add-project-form hide">
+            <input
+              type="text"
+              name="project-name"
+              id="project-name"
+              placeholder="Name"
+              required
+            />
+            <div class="add-project-btns">
+              <button class="add-btn add-project-btn">Add</button>
+              <div class="cancel-btn cancel-project-btn">Cancel</div>
+            </div>
+          </form>
         </aside>
         <section class="todo-cards">
           <div class="todo-card">
@@ -196,41 +216,47 @@
               dignissimos nulla odit rerum tempore! Possimus, aliquam quidem.
             </p>
           </div>
-          <div class="add-new-todo-form">
-            <form class="add-todo-form">
-              <div class="form">
-                <input
-                  type="text"
-                  name="title"
-                  id="title"
-                  placeholder="Task Title"
-                />
-              </div>
-              <div class="form">
-                <textarea
-                  id="todo-description"
-                  name="todo-description"
-                  placeholder="Description"
-                ></textarea>
-              </div>
-              <div class="lower-bottom-form">
-                <input
-                  placeholder="Due Date"
-                  class="textbox-n"
-                  type="text"
-                  onfocus="(this.type='date')"
-                  id="date"
-                />
-                <select name="priority" id="priority-select">
-                  <option value="high">High Priority</option>
-                  <option value="medium">Medium Priority</option>
-                  <option value="low">Low Priority</option>
-                </select>
-              </div>
-            </form>
-          </div>
+
+          <form class="add-todo-form hide">
+            <div class="form">
+              <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Task Title"
+                required
+              />
+            </div>
+            <div class="form">
+              <textarea
+                id="todo-description"
+                name="todo-description"
+                placeholder="Description"
+                required
+              ></textarea>
+            </div>
+            <div class="lower-bottom-form">
+              <input
+                placeholder="Due Date"
+                class="textbox"
+                type="text"
+                onfocus="(this.type='date')"
+                id="date"
+                required
+              />
+              <select name="priority" id="priority-select" required>
+                <option value="high">High Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="low">Low Priority</option>
+              </select>
+            </div>
+            <div class="form-btns">
+              <button class="form-btn">Add Task</button>
+              <div class="cancel-btn" id="form-cancel-btn">Cancel</div>
+            </div>
+          </form>
           <div class="add-task-button">
-            <button>&plus; Add Task</button>
+            <button class="add-task-btn">&plus; Add Task</button>
           </div>
         </section>
       </div>

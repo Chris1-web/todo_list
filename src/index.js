@@ -1,6 +1,7 @@
 import "./styles/styles.css";
 import loadImages from "./loadImages";
 import { createNewTodo, createProject, displayTodo } from "./logics";
+import { showNewTodoForm } from "./eventListeners";
 
 // const project1 = Project();
 // // const todo1 = project1.addTodo(
@@ -93,3 +94,4 @@ displayTodo(project1);
 
 // load all images on page
 loadImages();
+showNewTodoForm();
