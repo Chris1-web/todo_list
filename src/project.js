@@ -13,6 +13,9 @@ const getProjectId = (data) => ({
 const listTasks = (data) => {
   // get data in all tasks array and log out individual todos
   const listProjectTask = function () {
+    // clar current todo cards content
+    document.querySelector(".todo-cards").textContent = "";
+    // redisplay from array to screen
     data.allTasks.forEach(function (todo) {
       todoCardHTML(todo);
       loadImages();
@@ -24,6 +27,10 @@ const listTasks = (data) => {
 const addTodo = () => ({
   addTodo: (title, description, due_date, priority) =>
     Todo(title, description, due_date, priority),
+});
+
+const getAllTasks = (data) => ({
+  getAllTasks: () => data.allTasks,
 });
 
 const addTask = (data) => ({
@@ -44,7 +51,8 @@ const Project = function (projectName = "Welcome") {
     listTasks(data),
     addTask(data),
     addTodo(),
-    getProjectId(data)
+    getProjectId(data),
+    getAllTasks(data)
   );
 };
 

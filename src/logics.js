@@ -2,6 +2,23 @@ import Project from "./project";
 import { projectListHTML } from "./UIView";
 
 const allProjectsArray = [];
+
+const displayProjectList = function () {
+  // clear current HTML
+  const parentContainer = document.querySelector(".projects-navigation-list");
+  const allCurrentProjects = document.querySelectorAll(".project");
+  allCurrentProjects.forEach(function (currProject) {
+    parentContainer.removeChild(currProject);
+  });
+  allProjectsArray.forEach(function (project) {
+    projectListHTML(project);
+  });
+  const firstProject = parentContainer.firstElementChild;
+  if (firstProject) {
+    parentContainer.firstElementChild.classList.add("active");
+  }
+};
+
 const createProject = function (projectName = "Welcome") {
   const newProject = Project(projectName);
   allProjectsArray.push(newProject);
@@ -32,24 +49,16 @@ const displayTodo = function (project) {
   projectContainer.listProjectTask();
 };
 
-const displayProjectList = function () {
-  // clear current html
-  const parentContainer = document.querySelector(".projects-navigation-list");
-  parentContainer.textContent = "";
-  // learn first project example
-  projectListHTML("Welcome");
-  parentContainer.firstElementChild.classList.add("active");
-  // create html for new html from project list array loop
-  allProjectsArray.forEach(function (project) {
-    projectListHTML(project.projectName);
-    console.log(project);
-  });
-};
-
 const editProject = function () {};
 
 const editTodo = function () {};
 
 const deleteTodo = function () {};
 
-export { createNewTodo, createProject, displayTodo, allProjectsArray };
+export {
+  createNewTodo,
+  createProject,
+  displayTodo,
+  allProjectsArray,
+  displayProjectList,
+};

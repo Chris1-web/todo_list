@@ -1,3 +1,9 @@
+import { v4 as uuidv4 } from "uuid";
+
+const getId = (data) => ({
+  todoId: data.todoId,
+});
+
 const getTitle = (data) => ({
   title: data.title,
 });
@@ -12,18 +18,21 @@ const getPriority = (data) => ({
 });
 
 const Todo = function (title, description, due_date, priority) {
+  const todoId = uuidv4();
   const data = {
     title,
     description,
     due_date,
     priority,
+    todoId,
   };
   return Object.assign(
     {},
     getTitle(data),
     getDescription(data),
     getDueDate(data),
-    getPriority(data)
+    getPriority(data),
+    getId(data)
   );
 };
 

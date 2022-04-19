@@ -103,6 +103,21 @@ ul {
   cursor: pointer;
 }
 
+.delete-project-icon {
+  color: rgba(255, 0, 0, 0.495);
+  cursor: pointer;
+}
+
+.delete-project-icon:hover {
+  font-size: 3rem;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .project-navigation {
   height: 80vh;
   overflow: scroll;

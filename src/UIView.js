@@ -10,7 +10,7 @@ const homePageHTML = function () {
 const todoCardHTML = function (todoData) {
   const parent = "todo-cards";
   const html = `
-    <div class="todo-card">
+    <div class="todo-card" data-id="${todoData.todoId}">
       <div class="top">
         <h2 class="todo-title">${todoData.title}</h2>
         <div class="right-todo-nav">
@@ -26,10 +26,10 @@ const todoCardHTML = function (todoData) {
   insertHTML(parent, "beforeend", html);
 };
 
-const projectListHTML = function (projectName) {
+const projectListHTML = function (project) {
   const parent = "projects-navigation-list";
   const html = `
-    <li class="project">${projectName}</li>
+    <li class="project" data-id="${project.projectId}">${project.projectName} <span class="delete-project-icon">&#10006</span></li>
   `;
   insertHTML(parent, "beforeend", html);
 };
