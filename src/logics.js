@@ -51,6 +51,16 @@ const storeProjectLocalStorage = function (currentProject) {
   console.log(storedProjectAndTasksArray);
 };
 
+const removeTodoFromLocalStorage = function (currentProject) {
+  const projectIndex = storedProjectAndTasksArray
+    .map((project) => project.projectId)
+    .indexOf(currentProject.projectId);
+  storedProjectAndTasksArray.splice(projectIndex - 1, 1);
+  console.log(projectIndex);
+  console.log(storedProjectAndTasksArray);
+  localStorage.setItem("TodoList", JSON.stringify(storedProjectAndTasksArray));
+};
+
 const createNewTodo = function (
   project,
   title,
@@ -81,4 +91,5 @@ export {
   allProjectsArray,
   storeProjectLocalStorage,
   displayProjectList,
+  removeTodoFromLocalStorage,
 };

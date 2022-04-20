@@ -769,21 +769,21 @@ const todoCardContainer = document.querySelector(".todo-cards");
 
 /************************** default example project *****************************/
 let currentProject = (0,_logics__WEBPACK_IMPORTED_MODULE_0__.createProject)("Welcome"); //default project is welcome
-(0,_logics__WEBPACK_IMPORTED_MODULE_0__.createNewTodo)(
-  currentProject,
-  "charge my phone",
-  "I need to charge my phone as soon as the light comes on",
-  "02/2022",
-  "low"
-);
-(0,_logics__WEBPACK_IMPORTED_MODULE_0__.createNewTodo)(
-  currentProject,
-  "call a friend",
-  "Need to call a friend to catch up with old times",
-  "02/2023",
-  "high"
-);
-(0,_logics__WEBPACK_IMPORTED_MODULE_0__.displayTodo)(currentProject);
+// createNewTodo(
+//   currentProject,
+//   "charge my phone",
+//   "I need to charge my phone as soon as the light comes on",
+//   "02/2022",
+//   "low"
+// );
+// createNewTodo(
+//   currentProject,
+//   "call a friend",
+//   "Need to call a friend to catch up with old times",
+//   "02/2023",
+//   "high"
+// );
+// displayTodo(currentProject);
 
 /************************** default example project *****************************/
 
@@ -882,6 +882,7 @@ const showNewTodoForm = function () {
     if (allProjectTasks.lenght === 0) {
       addTaskBtn.classList.remove("hide");
     }
+    (0,_logics__WEBPACK_IMPORTED_MODULE_0__.storeProjectLocalStorage)(currentProject);
   });
   // delete project button event listener
   projectsConatiner.addEventListener("click", function (e) {
@@ -899,6 +900,10 @@ const showNewTodoForm = function () {
       addTaskBtn.classList.add("hide");
       addNewProjectBtn.click();
     }
+    // delete project from storedProjectAndTasksArray array
+    (0,_logics__WEBPACK_IMPORTED_MODULE_0__.storeProjectLocalStorage)(currentProject);
+    (0,_logics__WEBPACK_IMPORTED_MODULE_0__.removeTodoFromLocalStorage)(currentProject);
+    // not storeProjectLocalStorage(currentProject);
   });
   // edit todo button event listener
   let cardTodoId;
@@ -1047,6 +1052,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "createProject": () => (/* binding */ createProject),
 /* harmony export */   "displayProjectList": () => (/* binding */ displayProjectList),
 /* harmony export */   "displayTodo": () => (/* binding */ displayTodo),
+/* harmony export */   "removeTodoFromLocalStorage": () => (/* binding */ removeTodoFromLocalStorage),
 /* harmony export */   "storeProjectLocalStorage": () => (/* binding */ storeProjectLocalStorage)
 /* harmony export */ });
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/project.js");
@@ -1102,6 +1108,16 @@ const storeProjectLocalStorage = function (currentProject) {
   // store as json in local storage
   localStorage.setItem("TodoList", JSON.stringify(storedProjectAndTasksArray));
   console.log(storedProjectAndTasksArray);
+};
+
+const removeTodoFromLocalStorage = function (currentProject) {
+  const projectIndex = storedProjectAndTasksArray
+    .map((project) => project.projectId)
+    .indexOf(currentProject.projectId);
+  storedProjectAndTasksArray.splice(projectIndex - 1, 1);
+  console.log(projectIndex);
+  console.log(storedProjectAndTasksArray);
+  localStorage.setItem("TodoList", JSON.stringify(storedProjectAndTasksArray));
 };
 
 const createNewTodo = function (

@@ -4,6 +4,7 @@ import {
   displayTodo,
   displayProjectList,
   storeProjectLocalStorage,
+  removeTodoFromLocalStorage,
 } from "./logics";
 import { allProjectsArray } from "./logics";
 
@@ -19,21 +20,21 @@ const todoCardContainer = document.querySelector(".todo-cards");
 
 /************************** default example project *****************************/
 let currentProject = createProject("Welcome"); //default project is welcome
-createNewTodo(
-  currentProject,
-  "charge my phone",
-  "I need to charge my phone as soon as the light comes on",
-  "02/2022",
-  "low"
-);
-createNewTodo(
-  currentProject,
-  "call a friend",
-  "Need to call a friend to catch up with old times",
-  "02/2023",
-  "high"
-);
-displayTodo(currentProject);
+// createNewTodo(
+//   currentProject,
+//   "charge my phone",
+//   "I need to charge my phone as soon as the light comes on",
+//   "02/2022",
+//   "low"
+// );
+// createNewTodo(
+//   currentProject,
+//   "call a friend",
+//   "Need to call a friend to catch up with old times",
+//   "02/2023",
+//   "high"
+// );
+// displayTodo(currentProject);
 
 /************************** default example project *****************************/
 
@@ -132,6 +133,7 @@ const showNewTodoForm = function () {
     if (allProjectTasks.lenght === 0) {
       addTaskBtn.classList.remove("hide");
     }
+    storeProjectLocalStorage(currentProject);
   });
   // delete project button event listener
   projectsConatiner.addEventListener("click", function (e) {
@@ -150,6 +152,10 @@ const showNewTodoForm = function () {
       addTaskBtn.classList.add("hide");
       addNewProjectBtn.click();
     }
+    // delete project from storedProjectAndTasksArray array
+    storeProjectLocalStorage(currentProject);
+    removeTodoFromLocalStorage(currentProject);
+    // not storeProjectLocalStorage(currentProject);
   });
   // edit todo button event listener
   let cardTodoId;
