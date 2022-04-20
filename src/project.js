@@ -19,7 +19,6 @@ const listTasks = (data) => {
     data.allTasks.forEach(function (todo) {
       todoCardHTML(todo);
       loadImages();
-      console.log(todo);
     });
   };
   return { listProjectTask };

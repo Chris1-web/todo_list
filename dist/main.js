@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n:root {\n  --primary-background-color: #333333;\n  --primary-color: #112a46;\n}\n\nhtml {\n  font-size: 62.5%;\n}\n\nbody {\n  font-family: \"Comfortaa\", cursive;\n  background-color: var(--primary-background-color);\n  color: white;\n}\n\nul {\n  list-style: none;\n}\n\n.navigation,\n.project-nav-header,\n.top {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.top {\n  font-size: 2rem;\n}\n\n.container {\n  max-width: 120rem;\n  margin: 0 auto;\n  padding: 1rem 1rem;\n  height: 95vh;\n}\n\n.content {\n  display: grid;\n  grid-template-rows: 1fr 4fr;\n}\n\n.navigation {\n  height: 10vh;\n}\n\n.logo-container {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  font-size: 2rem;\n  color: white;\n}\n.logo-container img {\n  height: 5rem;\n  width: auto;\n}\n\n.todo-card img {\n  width: 2.5rem;\n  height: auto;\n  cursor: pointer;\n}\n\n.project-navigation-and-todo-card-container {\n  display: grid;\n  grid-template-columns: 1fr 4fr;\n}\n\n.project-navigation,\n.projects-navigation-list {\n  font-size: 2rem;\n  display: flex;\n  flex-direction: column;\n  gap: 2rem;\n  padding: 1rem 0;\n}\n\n.project-nav-header button {\n  font-size: 4rem;\n  padding: 0.2rem 1rem;\n  color: white;\n  cursor: pointer;\n  background-color: transparent;\n  border: none;\n}\n\n.project-nav-header button:hover,\n.todo-card img:hover {\n  background-color: grey;\n}\n\n.projects-navigation-list {\n  cursor: pointer;\n}\n\n.delete-project-icon {\n  color: rgba(255, 0, 0, 0.495);\n  cursor: pointer;\n}\n\n.delete-project-icon:hover {\n  font-size: 3rem;\n}\n\n.project {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.project-navigation {\n  height: 80vh;\n  overflow: scroll;\n}\n\n.section-and-below {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  height: 85vh;\n  overflow: scroll;\n}\n\n.todo-cards {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  padding: 0 2rem;\n}\n\n.todo-card {\n  border-bottom: 0.5rem solid #0ebe0e74;\n  padding: 1rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.add-task-button button {\n  padding: 1rem 2rem;\n  cursor: pointer;\n  font-size: 2rem;\n  background-color: transparent;\n  border: none;\n  color: #f8dada;\n}\n\n.add-todo-form,\n#project-name {\n  border: 0.1rem solid rgb(186, 186, 186);\n  border-radius: 1.2rem;\n  background-color: black;\n  padding: 1rem;\n}\n\n.form,\n.add-project-form {\n  font-size: 1.4rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.form > input,\n.form > select,\n.form > textarea,\n.lower-bottom-form input,\n.lower-bottom-form select,\n.add-project-form input {\n  padding: 1rem;\n  border: none;\n  outline: none;\n  background-color: transparent;\n  color: white;\n}\n\n.lower-bottom-form select,\n#date {\n  border: 0.1rem solid rgb(186, 186, 186);\n  border-radius: 1.2rem;\n}\n\n.lower-bottom-form {\n  border: none;\n  outline: none;\n  font-size: 1.4rem;\n  display: flex;\n  gap: 1rem;\n  margin: 1rem 0;\n}\n\n.form-btns,\n.add-project-btns,\n.right-todo-nav {\n  display: flex;\n  gap: 1rem;\n}\n\n.form-btns button,\n.cancel-btn,\n.add-btn {\n  padding: 1rem 2rem;\n  cursor: pointer;\n  border-radius: 1.2rem;\n}\n\n.form-btn,\n.add-btn {\n  background-color: green;\n  color: white;\n  border: none;\n}\n\n.cancel-btn {\n  border: 0.1rem solid rgb(186, 186, 186);\n  background-color: transparent;\n  color: white;\n  font-size: 1.2rem;\n}\n\n.active {\n  background-color: green;\n}\n\n.hide {\n  display: none;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/styles.css"],"names":[],"mappings":"AAEA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;EACE,mCAAmC;EACnC,wBAAwB;AAC1B;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,iCAAiC;EACjC,iDAAiD;EACjD,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB;;AAEA;;;EAGE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;AAChC;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;EACjB,cAAc;EACd,kBAAkB;EAClB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,2BAA2B;AAC7B;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,SAAS;EACT,eAAe;EACf,YAAY;AACd;AACA;EACE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,8BAA8B;AAChC;;AAEA;;EAEE,eAAe;EACf,aAAa;EACb,sBAAsB;EACtB,SAAS;EACT,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,oBAAoB;EACpB,YAAY;EACZ,eAAe;EACf,6BAA6B;EAC7B,YAAY;AACd;;AAEA;;EAEE,sBAAsB;AACxB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,6BAA6B;EAC7B,eAAe;AACjB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;AAChC;;AAEA;EACE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,SAAS;EACT,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,SAAS;EACT,eAAe;AACjB;;AAEA;EACE,qCAAqC;EACrC,aAAa;EACb,aAAa;EACb,sBAAsB;EACtB,SAAS;AACX;;AAEA;EACE,kBAAkB;EAClB,eAAe;EACf,eAAe;EACf,6BAA6B;EAC7B,YAAY;EACZ,cAAc;AAChB;;AAEA;;EAEE,uCAAuC;EACvC,qBAAqB;EACrB,uBAAuB;EACvB,aAAa;AACf;;AAEA;;EAEE,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,SAAS;AACX;;AAEA;;;;;;EAME,aAAa;EACb,YAAY;EACZ,aAAa;EACb,6BAA6B;EAC7B,YAAY;AACd;;AAEA;;EAEE,uCAAuC;EACvC,qBAAqB;AACvB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,iBAAiB;EACjB,aAAa;EACb,SAAS;EACT,cAAc;AAChB;;AAEA;;;EAGE,aAAa;EACb,SAAS;AACX;;AAEA;;;EAGE,kBAAkB;EAClB,eAAe;EACf,qBAAqB;AACvB;;AAEA;;EAEE,uBAAuB;EACvB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,uCAAuC;EACvC,6BAA6B;EAC7B,YAAY;EACZ,iBAAiB;AACnB;;AAEA;EACE,uBAAuB;AACzB;;AAEA;EACE,aAAa;AACf","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap\");\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n:root {\n  --primary-background-color: #333333;\n  --primary-color: #112a46;\n}\n\nhtml {\n  font-size: 62.5%;\n}\n\nbody {\n  font-family: \"Comfortaa\", cursive;\n  background-color: var(--primary-background-color);\n  color: white;\n}\n\nul {\n  list-style: none;\n}\n\n.navigation,\n.project-nav-header,\n.top {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.top {\n  font-size: 2rem;\n}\n\n.container {\n  max-width: 120rem;\n  margin: 0 auto;\n  padding: 1rem 1rem;\n  height: 95vh;\n}\n\n.content {\n  display: grid;\n  grid-template-rows: 1fr 4fr;\n}\n\n.navigation {\n  height: 10vh;\n}\n\n.logo-container {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  font-size: 2rem;\n  color: white;\n}\n.logo-container img {\n  height: 5rem;\n  width: auto;\n}\n\n.todo-card img {\n  width: 2.5rem;\n  height: auto;\n  cursor: pointer;\n}\n\n.project-navigation-and-todo-card-container {\n  display: grid;\n  grid-template-columns: 1fr 4fr;\n}\n\n.project-navigation,\n.projects-navigation-list {\n  font-size: 2rem;\n  display: flex;\n  flex-direction: column;\n  gap: 2rem;\n  padding: 1rem 0;\n}\n\n.project-nav-header button {\n  font-size: 4rem;\n  padding: 0.2rem 1rem;\n  color: white;\n  cursor: pointer;\n  background-color: transparent;\n  border: none;\n}\n\n.project-nav-header button:hover,\n.todo-card img:hover {\n  background-color: grey;\n}\n\n.projects-navigation-list {\n  cursor: pointer;\n}\n\n.delete-project-icon {\n  color: rgba(255, 0, 0, 0.495);\n  cursor: pointer;\n}\n\n.delete-project-icon:hover {\n  font-size: 3rem;\n}\n\n.project {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.project-navigation {\n  height: 80vh;\n  overflow: scroll;\n}\n\n.section-and-below {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  height: 85vh;\n  overflow: scroll;\n}\n\n.todo-cards {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  padding: 0 2rem;\n}\n\n.todo-card {\n  border-bottom: 0.5rem solid #0ebe0e74;\n  padding: 1rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.add-task-button button {\n  padding: 1rem 2rem;\n  cursor: pointer;\n  font-size: 2rem;\n  background-color: transparent;\n  border: none;\n  color: #f8dada;\n}\n\n.add-todo-form,\n#project-name {\n  border: 0.1rem solid rgb(186, 186, 186);\n  border-radius: 1.2rem;\n  background-color: black;\n  padding: 1rem;\n}\n\n.form,\n.add-project-form {\n  font-size: 1.4rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.form > input,\n.form > select,\n.form > textarea,\n.lower-bottom-form input,\n.lower-bottom-form select,\n.add-project-form input {\n  padding: 1rem;\n  border: none;\n  outline: none;\n  background-color: transparent;\n  color: white;\n}\n\n.lower-bottom-form select,\n#date {\n  border: 0.1rem solid rgb(186, 186, 186);\n  border-radius: 1.2rem;\n}\n\n.lower-bottom-form {\n  border: none;\n  outline: none;\n  font-size: 1.4rem;\n  display: flex;\n  gap: 1rem;\n  margin: 1rem 0;\n}\n\n.form-btns,\n.add-project-btns,\n.right-todo-nav {\n  display: flex;\n  gap: 1rem;\n}\n\n.form-btns button,\n.cancel-btn,\n.add-btn {\n  padding: 1rem 2rem;\n  cursor: pointer;\n  border-radius: 1.2rem;\n}\n\n.form-btn,\n.add-btn {\n  background-color: green;\n  color: white;\n  border: none;\n}\n\n.cancel-btn {\n  border: 0.1rem solid rgb(186, 186, 186);\n  background-color: transparent;\n  color: white;\n  font-size: 1.2rem;\n}\n\n.active {\n  background-color: green;\n}\n\n.hide {\n  display: none;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n:root {\n  --primary-background-color: #333333;\n  --primary-color: #112a46;\n}\n\nhtml {\n  font-size: 62.5%;\n}\n\nbody {\n  font-family: \"Comfortaa\", cursive;\n  /* background-color: var(--primary-background-color); */\n  /* color: white; */\n}\n\nul {\n  list-style: none;\n}\n\n.navigation,\n.project-nav-header,\n.top {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.top {\n  font-size: 2rem;\n}\n\n.container {\n  max-width: 120rem;\n  margin: 0 auto;\n  padding: 1rem 1rem;\n  height: 95vh;\n}\n\n.content {\n  display: grid;\n  grid-template-rows: 1fr 4fr;\n}\n\n.navigation {\n  height: 10vh;\n}\n\n.logo-container {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  font-size: 2rem;\n  /* color: white; */\n}\n.logo-container img {\n  height: 5rem;\n  width: auto;\n}\n\n.todo-card img {\n  width: 2.5rem;\n  height: auto;\n  cursor: pointer;\n}\n\n.project-navigation-and-todo-card-container {\n  display: grid;\n  grid-template-columns: 1fr 4fr;\n}\n\n.project-navigation,\n.projects-navigation-list {\n  font-size: 2rem;\n  display: flex;\n  flex-direction: column;\n  gap: 2rem;\n  padding: 1rem 0;\n}\n\n.project-nav-header button {\n  font-size: 4rem;\n  padding: 0.2rem 1rem;\n  /* color: white; */\n  cursor: pointer;\n  background-color: transparent;\n  border: none;\n}\n\n.project-nav-header button:hover,\n.todo-card img:hover {\n  background-color: grey;\n}\n\n.projects-navigation-list {\n  cursor: pointer;\n}\n\n.delete-project-icon {\n  color: rgba(255, 0, 0, 0.495);\n  cursor: pointer;\n}\n\n.delete-project-icon:hover {\n  font-size: 3rem;\n}\n\n.project {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.project-navigation {\n  height: 80vh;\n  overflow: scroll;\n}\n\n.section-and-below {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  height: 85vh;\n  overflow: scroll;\n}\n\n.todo-cards {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  padding: 0 2rem;\n}\n\n.todo-card {\n  border: 0.5rem solid #0ebe0e74;\n  padding: 1rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.add-task-button button {\n  padding: 1rem 2rem;\n  cursor: pointer;\n  font-size: 2rem;\n  background-color: transparent;\n  border: none;\n  color: #ec6363;\n}\n\n.add-todo-form,\n.edit-todo-form,\n#project-name {\n  border: 0.1rem solid rgb(186, 186, 186);\n  border-radius: 1.2rem;\n  background-color: black;\n  padding: 1rem;\n}\n\n.form,\n.add-project-form {\n  font-size: 1.4rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.form > input,\n.form > select,\n.form > textarea,\n.lower-bottom-form input,\n.lower-bottom-form select,\n.add-project-form input {\n  padding: 1rem;\n  border: none;\n  outline: none;\n  background-color: transparent;\n  color: white;\n}\n\n.lower-bottom-form select,\n#date {\n  border: 0.1rem solid rgb(186, 186, 186);\n  border-radius: 1.2rem;\n}\n\n.lower-bottom-form {\n  border: none;\n  outline: none;\n  font-size: 1.4rem;\n  display: flex;\n  gap: 1rem;\n  margin: 1rem 0;\n}\n\n.form-btns,\n.edit-form-btns,\n.add-project-btns,\n.right-todo-nav {\n  display: flex;\n  gap: 1rem;\n}\n\n.form-btns button,\n.edit-form-btns button,\n.cancel-btn,\n.edit-cancel-btn,\n.add-btn {\n  padding: 1rem 2rem;\n  cursor: pointer;\n  border-radius: 1.2rem;\n}\n\n.form-btn,\n.edit-form-btn,\n.add-btn {\n  background-color: green;\n  color: white;\n  border: none;\n}\n\n.cancel-btn,\n.edit-cancel-btn {\n  border: 0.1rem solid rgb(186, 186, 186);\n  background-color: transparent;\n  color: white;\n  font-size: 1.2rem;\n}\n\n.cancel-btn {\n  background-color: black;\n  color: white;\n}\n\n.active {\n  background-color: green;\n}\n\n.hide {\n  display: none;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/styles.css"],"names":[],"mappings":"AAEA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;EACE,mCAAmC;EACnC,wBAAwB;AAC1B;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,iCAAiC;EACjC,uDAAuD;EACvD,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;;;EAGE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;AAChC;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;EACjB,cAAc;EACd,kBAAkB;EAClB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,2BAA2B;AAC7B;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,SAAS;EACT,eAAe;EACf,kBAAkB;AACpB;AACA;EACE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,8BAA8B;AAChC;;AAEA;;EAEE,eAAe;EACf,aAAa;EACb,sBAAsB;EACtB,SAAS;EACT,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,oBAAoB;EACpB,kBAAkB;EAClB,eAAe;EACf,6BAA6B;EAC7B,YAAY;AACd;;AAEA;;EAEE,sBAAsB;AACxB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,6BAA6B;EAC7B,eAAe;AACjB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;AAChC;;AAEA;EACE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,SAAS;EACT,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,SAAS;EACT,eAAe;AACjB;;AAEA;EACE,8BAA8B;EAC9B,aAAa;EACb,aAAa;EACb,sBAAsB;EACtB,SAAS;AACX;;AAEA;EACE,kBAAkB;EAClB,eAAe;EACf,eAAe;EACf,6BAA6B;EAC7B,YAAY;EACZ,cAAc;AAChB;;AAEA;;;EAGE,uCAAuC;EACvC,qBAAqB;EACrB,uBAAuB;EACvB,aAAa;AACf;;AAEA;;EAEE,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,SAAS;AACX;;AAEA;;;;;;EAME,aAAa;EACb,YAAY;EACZ,aAAa;EACb,6BAA6B;EAC7B,YAAY;AACd;;AAEA;;EAEE,uCAAuC;EACvC,qBAAqB;AACvB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,iBAAiB;EACjB,aAAa;EACb,SAAS;EACT,cAAc;AAChB;;AAEA;;;;EAIE,aAAa;EACb,SAAS;AACX;;AAEA;;;;;EAKE,kBAAkB;EAClB,eAAe;EACf,qBAAqB;AACvB;;AAEA;;;EAGE,uBAAuB;EACvB,YAAY;EACZ,YAAY;AACd;;AAEA;;EAEE,uCAAuC;EACvC,6BAA6B;EAC7B,YAAY;EACZ,iBAAiB;AACnB;;AAEA;EACE,uBAAuB;EACvB,YAAY;AACd;;AAEA;EACE,uBAAuB;AACzB;;AAEA;EACE,aAAa;AACf","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap\");\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n:root {\n  --primary-background-color: #333333;\n  --primary-color: #112a46;\n}\n\nhtml {\n  font-size: 62.5%;\n}\n\nbody {\n  font-family: \"Comfortaa\", cursive;\n  /* background-color: var(--primary-background-color); */\n  /* color: white; */\n}\n\nul {\n  list-style: none;\n}\n\n.navigation,\n.project-nav-header,\n.top {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.top {\n  font-size: 2rem;\n}\n\n.container {\n  max-width: 120rem;\n  margin: 0 auto;\n  padding: 1rem 1rem;\n  height: 95vh;\n}\n\n.content {\n  display: grid;\n  grid-template-rows: 1fr 4fr;\n}\n\n.navigation {\n  height: 10vh;\n}\n\n.logo-container {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  font-size: 2rem;\n  /* color: white; */\n}\n.logo-container img {\n  height: 5rem;\n  width: auto;\n}\n\n.todo-card img {\n  width: 2.5rem;\n  height: auto;\n  cursor: pointer;\n}\n\n.project-navigation-and-todo-card-container {\n  display: grid;\n  grid-template-columns: 1fr 4fr;\n}\n\n.project-navigation,\n.projects-navigation-list {\n  font-size: 2rem;\n  display: flex;\n  flex-direction: column;\n  gap: 2rem;\n  padding: 1rem 0;\n}\n\n.project-nav-header button {\n  font-size: 4rem;\n  padding: 0.2rem 1rem;\n  /* color: white; */\n  cursor: pointer;\n  background-color: transparent;\n  border: none;\n}\n\n.project-nav-header button:hover,\n.todo-card img:hover {\n  background-color: grey;\n}\n\n.projects-navigation-list {\n  cursor: pointer;\n}\n\n.delete-project-icon {\n  color: rgba(255, 0, 0, 0.495);\n  cursor: pointer;\n}\n\n.delete-project-icon:hover {\n  font-size: 3rem;\n}\n\n.project {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.project-navigation {\n  height: 80vh;\n  overflow: scroll;\n}\n\n.section-and-below {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  height: 85vh;\n  overflow: scroll;\n}\n\n.todo-cards {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  padding: 0 2rem;\n}\n\n.todo-card {\n  border: 0.5rem solid #0ebe0e74;\n  padding: 1rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.add-task-button button {\n  padding: 1rem 2rem;\n  cursor: pointer;\n  font-size: 2rem;\n  background-color: transparent;\n  border: none;\n  color: #ec6363;\n}\n\n.add-todo-form,\n.edit-todo-form,\n#project-name {\n  border: 0.1rem solid rgb(186, 186, 186);\n  border-radius: 1.2rem;\n  background-color: black;\n  padding: 1rem;\n}\n\n.form,\n.add-project-form {\n  font-size: 1.4rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.form > input,\n.form > select,\n.form > textarea,\n.lower-bottom-form input,\n.lower-bottom-form select,\n.add-project-form input {\n  padding: 1rem;\n  border: none;\n  outline: none;\n  background-color: transparent;\n  color: white;\n}\n\n.lower-bottom-form select,\n#date {\n  border: 0.1rem solid rgb(186, 186, 186);\n  border-radius: 1.2rem;\n}\n\n.lower-bottom-form {\n  border: none;\n  outline: none;\n  font-size: 1.4rem;\n  display: flex;\n  gap: 1rem;\n  margin: 1rem 0;\n}\n\n.form-btns,\n.edit-form-btns,\n.add-project-btns,\n.right-todo-nav {\n  display: flex;\n  gap: 1rem;\n}\n\n.form-btns button,\n.edit-form-btns button,\n.cancel-btn,\n.edit-cancel-btn,\n.add-btn {\n  padding: 1rem 2rem;\n  cursor: pointer;\n  border-radius: 1.2rem;\n}\n\n.form-btn,\n.edit-form-btn,\n.add-btn {\n  background-color: green;\n  color: white;\n  border: none;\n}\n\n.cancel-btn,\n.edit-cancel-btn {\n  border: 0.1rem solid rgb(186, 186, 186);\n  background-color: transparent;\n  color: white;\n  font-size: 1.2rem;\n}\n\n.cancel-btn {\n  background-color: black;\n  color: white;\n}\n\n.active {\n  background-color: green;\n}\n\n.hide {\n  display: none;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -704,8 +704,16 @@ const homePageHTML = function () {
 
 const todoCardHTML = function (todoData) {
   const parent = "todo-cards";
+  let styleBorderColor;
+  if (todoData.priority === "high") {
+    styleBorderColor = "red";
+  } else if (todoData.priority === "medium") {
+    styleBorderColor = "green";
+  } else {
+    styleBorderColor = "yellow";
+  }
   const html = `
-    <div class="todo-card" data-id="${todoData.todoId}">
+    <div class="todo-card" data-id="${todoData.todoId}" style="border: 0.5rem solid ${styleBorderColor}">
       <div class="top">
         <h2 class="todo-title">${todoData.title}</h2>
         <div class="right-todo-nav">
@@ -716,6 +724,7 @@ const todoCardHTML = function (todoData) {
       <p class="todo-description">
         ${todoData.description}
       </p>
+      <p>${todoData.due_date}</p>
     </div>
   `;
   insertHTML(parent, "beforeend", html);
@@ -750,13 +759,33 @@ __webpack_require__.r(__webpack_exports__);
 
 const addTaskBtn = document.querySelector(".add-task-btn");
 const addNewTodoForm = document.querySelector(".add-todo-form");
+const editTodoForm = document.querySelector(".edit-todo-form");
 const addNewProjectForm = document.querySelector(".add-project-form");
 const addNewProjectBtn = document.querySelector(".project-plus");
 const cancelNewTaskBtn = document.querySelector("#form-cancel-btn");
 const cancelNewProjectBtn = document.querySelector(".cancel-project-btn");
 const projectsConatiner = document.querySelector(".projects-navigation-list");
 const todoCardContainer = document.querySelector(".todo-cards");
+
+/************************** default example project *****************************/
 let currentProject = (0,_logics__WEBPACK_IMPORTED_MODULE_0__.createProject)("Welcome"); //default project is welcome
+(0,_logics__WEBPACK_IMPORTED_MODULE_0__.createNewTodo)(
+  currentProject,
+  "charge my phone",
+  "I need to charge my phone as soon as the light comes on",
+  "02/2022",
+  "low"
+);
+(0,_logics__WEBPACK_IMPORTED_MODULE_0__.createNewTodo)(
+  currentProject,
+  "call a friend",
+  "Need to call a friend to catch up with old times",
+  "02/2023",
+  "high"
+);
+(0,_logics__WEBPACK_IMPORTED_MODULE_0__.displayTodo)(currentProject);
+
+/************************** default example project *****************************/
 
 const getCurrentCard = function (e) {
   const currentCard = e.target.closest(".todo-card");
@@ -769,7 +798,6 @@ const showNewTodoForm = function () {
     addTaskBtn.classList.add("hide");
   });
   addNewTodoForm.addEventListener("submit", function (e) {
-    // console.log(currentProject);
     e.preventDefault();
     const title = document.querySelector("#title").value.trim();
     const description = document
@@ -780,13 +808,12 @@ const showNewTodoForm = function () {
     document.querySelector("#title").value = "";
     document.querySelector("#todo-description").value = "";
     document.querySelector("#date").value = "";
-    document.querySelector("#priority-select").value = "High Priority";
+    document.querySelector("#priority-select").value = "high";
     cancelNewTaskBtn.click();
     // create a new todo object
     (0,_logics__WEBPACK_IMPORTED_MODULE_0__.createNewTodo)(currentProject, title, description, due_date, priority);
     // display new todo on screen
     (0,_logics__WEBPACK_IMPORTED_MODULE_0__.displayTodo)(currentProject);
-    console.log(currentProject);
   });
   cancelNewTaskBtn.addEventListener("click", function () {
     addNewTodoForm.classList.toggle("hide");
@@ -829,20 +856,24 @@ const showNewTodoForm = function () {
       (project) => project.projectId === currProjectId
     )[0];
     (0,_logics__WEBPACK_IMPORTED_MODULE_0__.displayTodo)(currentProject);
+    if (!editTodoForm.classList.contains("hide")) {
+      editTodoForm.classList.add("hide");
+      addTaskBtn.classList.remove("hide");
+    }
   });
   // delete todo button event listener
   todoCardContainer.addEventListener("click", function (e) {
     if (!e.target.classList.contains("delete-icon")) return;
     const clickedCardId = getCurrentCard(e).dataset.id;
-    console.log(clickedCardId);
     const allProjectTasks = currentProject.getAllTasks();
-    console.log(allProjectTasks);
     const currentCardIndex = allProjectTasks
       .map((task) => task.todoId)
       .indexOf(clickedCardId);
-    console.log(currentCardIndex);
     allProjectTasks.splice(currentCardIndex, 1);
     (0,_logics__WEBPACK_IMPORTED_MODULE_0__.displayTodo)(currentProject);
+    if (allProjectTasks.lenght === 0) {
+      addTaskBtn.classList.remove("hide");
+    }
   });
   // delete project button event listener
   projectsConatiner.addEventListener("click", function (e) {
@@ -860,6 +891,56 @@ const showNewTodoForm = function () {
       addTaskBtn.classList.add("hide");
       addNewProjectBtn.click();
     }
+  });
+  // edit todo button event listener
+  let cardTodoId;
+  todoCardContainer.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("edit-icon")) return;
+    const card = getCurrentCard(e);
+    let cardPriority;
+    const cardBorderColor = card.style.borderColor;
+    if (cardBorderColor === "red") {
+      cardPriority = "high";
+    } else if (cardBorderColor === "green") {
+      cardPriority = "medium";
+    } else {
+      cardPriority = "low";
+    }
+    cardTodoId = card.dataset.id;
+    const cardTitle = card.firstElementChild.firstElementChild.textContent;
+    const cardDescription = card.children[1].textContent.trim();
+    const cardDate = card.lastElementChild.textContent;
+    document.querySelector("#edit-title").value = cardTitle;
+    document.querySelector("#edit-todo-description").value = cardDescription;
+    document.querySelector("#edit-date").value = cardDate;
+    document.querySelector("#edit-priority-select").value = cardPriority;
+    addNewTodoForm.classList.add("hide");
+    addTaskBtn.classList.add("hide");
+    editTodoForm.classList.remove("hide");
+  });
+  editTodoForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const newTitle = document.querySelector("#edit-title").value.trim();
+    const newDescription = document
+      .querySelector("#edit-todo-description")
+      .value.trim();
+    const new_due_date = document.querySelector("#edit-date").value;
+    const newPriority = document.querySelector("#edit-priority-select").value;
+    const allProjectTasks = currentProject.getAllTasks();
+    const currentCardIndex = allProjectTasks
+      .map((task) => task.todoId)
+      .indexOf(cardTodoId);
+    const getTodo = allProjectTasks[currentCardIndex];
+    getTodo.title = newTitle;
+    getTodo.description = newDescription;
+    getTodo.due_date = new_due_date;
+    getTodo.priority = newPriority;
+    (0,_logics__WEBPACK_IMPORTED_MODULE_0__.displayTodo)(currentProject);
+    document.querySelector("#edit-title").value = "";
+    document.querySelector("#edit-todo-description").value = "";
+    document.querySelector("#edit-date").value = "";
+    document.querySelector("#edit-priority-select").value = "";
+    editTodoForm.classList.add("hide");
   });
 };
 
@@ -1016,7 +1097,6 @@ const listTasks = (data) => {
     data.allTasks.forEach(function (todo) {
       (0,_UIView__WEBPACK_IMPORTED_MODULE_1__.todoCardHTML)(todo);
       (0,_loadImages__WEBPACK_IMPORTED_MODULE_2__["default"])();
-      console.log(todo);
     });
   };
   return { listProjectTask };
@@ -1259,26 +1339,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_loadImages__WEBPACK_IMPORTED_MODULE_1__["default"])();
-
-const exampleProject = (0,_logics__WEBPACK_IMPORTED_MODULE_2__.createProject)("Personal");
-console.log(exampleProject.projectId);
-console.log(exampleProject);
-(0,_logics__WEBPACK_IMPORTED_MODULE_2__.createNewTodo)(
-  exampleProject,
-  "charge my phone",
-  "I need to charge my phone as soon as the light comes on",
-  "02/2022",
-  "low"
-);
-(0,_logics__WEBPACK_IMPORTED_MODULE_2__.createNewTodo)(
-  exampleProject,
-  "call a friend",
-  "Need to call a friend to catch up with old times",
-  "02/2023",
-  "high"
-);
-(0,_logics__WEBPACK_IMPORTED_MODULE_2__.displayTodo)(exampleProject);
-
 (0,_eventListeners__WEBPACK_IMPORTED_MODULE_3__.showNewTodoForm)();
 
 })();

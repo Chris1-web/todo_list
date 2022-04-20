@@ -17,8 +17,8 @@ html {
 
 body {
   font-family: "Comfortaa", cursive;
-  background-color: var(--primary-background-color);
-  color: white;
+  /* background-color: var(--primary-background-color); */
+  /* color: white; */
 }
 
 ul {
@@ -58,7 +58,7 @@ ul {
   align-items: center;
   gap: 1rem;
   font-size: 2rem;
-  color: white;
+  /* color: white; */
 }
 .logo-container img {
   height: 5rem;
@@ -88,7 +88,7 @@ ul {
 .project-nav-header button {
   font-size: 4rem;
   padding: 0.2rem 1rem;
-  color: white;
+  /* color: white; */
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -139,7 +139,7 @@ ul {
 }
 
 .todo-card {
-  border-bottom: 0.5rem solid #0ebe0e74;
+  border: 0.5rem solid #0ebe0e74;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -152,10 +152,11 @@ ul {
   font-size: 2rem;
   background-color: transparent;
   border: none;
-  color: #f8dada;
+  color: #ec6363;
 }
 
 .add-todo-form,
+.edit-todo-form,
 #project-name {
   border: 0.1rem solid rgb(186, 186, 186);
   border-radius: 1.2rem;
@@ -200,6 +201,7 @@ ul {
 }
 
 .form-btns,
+.edit-form-btns,
 .add-project-btns,
 .right-todo-nav {
   display: flex;
@@ -207,7 +209,9 @@ ul {
 }
 
 .form-btns button,
+.edit-form-btns button,
 .cancel-btn,
+.edit-cancel-btn,
 .add-btn {
   padding: 1rem 2rem;
   cursor: pointer;
@@ -215,17 +219,24 @@ ul {
 }
 
 .form-btn,
+.edit-form-btn,
 .add-btn {
   background-color: green;
   color: white;
   border: none;
 }
 
-.cancel-btn {
+.cancel-btn,
+.edit-cancel-btn {
   border: 0.1rem solid rgb(186, 186, 186);
   background-color: transparent;
   color: white;
   font-size: 1.2rem;
+}
+
+.cancel-btn {
+  background-color: black;
+  color: white;
 }
 
 .active {

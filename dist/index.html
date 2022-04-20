@@ -22,7 +22,6 @@
           </div>
           <ul class="projects-navigation-list">
             <li class="project active">Welcome <span>&#10006</span></li>
-            <li class="project">Personal</li>
           </ul>
           <form class="add-project-form hide">
             <input
@@ -40,25 +39,7 @@
         </aside>
         <div class="section-and-below">
           <section class="todo-cards">
-            <div class="todo-card">
-              <div class="top">
-                <h2 class="todo-title">Lorem ipsum dolor</h2>
-                <div class="right-todo-nav">
-                  <img class="edit-icon" alt="edit icon" />
-                  <img class="delete-icon" src="" alt="delete icon" />
-                </div>
-              </div>
-              <p class="todo-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Possimus, cum! Sint veritatis molestiae, sapiente vel
-                dignissimos repellat reiciendis voluptatibus sit facere est?
-                Veritatis eos, neque nostrum alias sequi quae unde. Lorem ipsum,
-                dolor sit amet consectetur adipisicing elit. Adipisci ea quis
-                inventore rem doloribus, illo dolorem. Maiores aspernatur
-                provident vel deserunt molestias in debitis nemo quibusdam
-                mollitia voluptatum, error incidunt.
-              </p>
-            </div>
+            <!-- todo card displayed here -->
           </section>
           <form class="add-todo-form hide">
             <div class="form">
@@ -102,6 +83,47 @@
           <div class="add-task-button">
             <button class="add-task-btn">&plus; Add Task</button>
           </div>
+
+          <!-- edit todo form -->
+          <form class="edit-todo-form hide">
+            <div class="form">
+              <input
+                type="text"
+                name="edit-title"
+                id="edit-title"
+                placeholder="Task Title"
+                maxlength="20"
+                required
+              />
+            </div>
+            <div class="form">
+              <textarea
+                id="edit-todo-description"
+                name="edit-todo-description"
+                placeholder="Description"
+                required
+              ></textarea>
+            </div>
+            <div class="lower-bottom-form">
+              <input
+                placeholder="Due Date"
+                class="edit-textbox"
+                type="text"
+                onfocus="(this.type='date')"
+                id="edit-date"
+                required
+              />
+              <select name="edit-priority" id="edit-priority-select" required>
+                <option value="high">High Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="low">Low Priority</option>
+              </select>
+            </div>
+            <div class="edit-form-btns">
+              <button class="edit-form-btn">Edit Task</button>
+              <div class="edit-cancel-btn" id="edit-form-cancel-btn">Cancel</div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

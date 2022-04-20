@@ -9,8 +9,16 @@ const homePageHTML = function () {
 
 const todoCardHTML = function (todoData) {
   const parent = "todo-cards";
+  let styleBorderColor;
+  if (todoData.priority === "high") {
+    styleBorderColor = "red";
+  } else if (todoData.priority === "medium") {
+    styleBorderColor = "green";
+  } else {
+    styleBorderColor = "yellow";
+  }
   const html = `
-    <div class="todo-card" data-id="${todoData.todoId}">
+    <div class="todo-card" data-id="${todoData.todoId}" style="border: 0.5rem solid ${styleBorderColor}">
       <div class="top">
         <h2 class="todo-title">${todoData.title}</h2>
         <div class="right-todo-nav">
@@ -21,6 +29,7 @@ const todoCardHTML = function (todoData) {
       <p class="todo-description">
         ${todoData.description}
       </p>
+      <p>${todoData.due_date}</p>
     </div>
   `;
   insertHTML(parent, "beforeend", html);
