@@ -814,6 +814,10 @@ const showNewTodoForm = function () {
     (0,_logics__WEBPACK_IMPORTED_MODULE_0__.createNewTodo)(currentProject, title, description, due_date, priority);
     // display new todo on screen
     (0,_logics__WEBPACK_IMPORTED_MODULE_0__.displayTodo)(currentProject);
+
+    // store the project in local storage //
+    (0,_logics__WEBPACK_IMPORTED_MODULE_0__.storeProjectLocalStorage)(currentProject);
+    // fklmf;ldmf;amf;dlfmd;lf //
   });
   cancelNewTaskBtn.addEventListener("click", function () {
     addNewTodoForm.classList.toggle("hide");
@@ -839,6 +843,10 @@ const showNewTodoForm = function () {
     if (addTaskBtn.classList.contains("hide")) {
       addTaskBtn.classList.remove("hide");
     }
+
+    // store the todo in local storage //
+    (0,_logics__WEBPACK_IMPORTED_MODULE_0__.storeProjectLocalStorage)(currentProject);
+    // fklmf;ldmf;amf;dlfmd;lf //
   });
   // change active current project on screen and project itself
   projectsConatiner.addEventListener("click", function (e) {
@@ -984,6 +992,48 @@ const loadImages = function () {
 
 /***/ }),
 
+/***/ "./src/localStorage.js":
+/*!*****************************!*\
+  !*** ./src/localStorage.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function storageAvailable(type) {
+  var storage;
+  try {
+    storage = window[type];
+    var x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage &&
+      storage.length !== 0
+    );
+  }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (storageAvailable);
+
+
+/***/ }),
+
 /***/ "./src/logics.js":
 /*!***********************!*\
   !*** ./src/logics.js ***!
@@ -996,7 +1046,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "createNewTodo": () => (/* binding */ createNewTodo),
 /* harmony export */   "createProject": () => (/* binding */ createProject),
 /* harmony export */   "displayProjectList": () => (/* binding */ displayProjectList),
-/* harmony export */   "displayTodo": () => (/* binding */ displayTodo)
+/* harmony export */   "displayTodo": () => (/* binding */ displayTodo),
+/* harmony export */   "storeProjectLocalStorage": () => (/* binding */ storeProjectLocalStorage)
 /* harmony export */ });
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/project.js");
 /* harmony import */ var _UIView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UIView */ "./src/UIView.js");
@@ -1004,6 +1055,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const allProjectsArray = [];
+const storedProjectAndTasksArray = [];
 
 const displayProjectList = function () {
   // clear current HTML
@@ -1025,7 +1077,31 @@ const createProject = function (projectName = "Welcome") {
   const newProject = (0,_project__WEBPACK_IMPORTED_MODULE_0__["default"])(projectName);
   allProjectsArray.push(newProject);
   displayProjectList();
+  // // // // // // // // // To be removed // // // // // // // // // // // // //
+  // localStorage.setItem("TodoList", JSON.stringify(allProjectsArray));
+  // // // // // // // // //// // // // // // // // // // // // // // // // // //
   return newProject;
+};
+
+const storeProjectLocalStorage = function (currentProject) {
+  // create a copy of current project
+  const projectCopy = Object.assign({}, currentProject);
+  // get all project tasks
+  projectCopy.localTodo = projectCopy.getAllTasks();
+  console.log(projectCopy);
+  // check if current project exist
+  const currentTodoIndex = storedProjectAndTasksArray
+    .map((project) => project.projectId)
+    .indexOf(projectCopy.projectId);
+  // if it exist replace it in the array else create a new copy to be put into array
+  if (currentTodoIndex !== -1) {
+    storedProjectAndTasksArray[currentTodoIndex] = projectCopy;
+  } else {
+    storedProjectAndTasksArray.push(projectCopy);
+  }
+  // store as json in local storage
+  localStorage.setItem("TodoList", JSON.stringify(storedProjectAndTasksArray));
+  console.log(storedProjectAndTasksArray);
 };
 
 const createNewTodo = function (
@@ -1050,12 +1126,6 @@ const displayTodo = function (project) {
   const projectContainer = project;
   projectContainer.listProjectTask();
 };
-
-const editProject = function () {};
-
-const editTodo = function () {};
-
-const deleteTodo = function () {};
 
 
 
@@ -1333,6 +1403,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _loadImages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loadImages */ "./src/loadImages.js");
 /* harmony import */ var _logics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logics */ "./src/logics.js");
 /* harmony import */ var _eventListeners__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./eventListeners */ "./src/eventListeners.js");
+/* harmony import */ var _localStorage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./localStorage */ "./src/localStorage.js");
+
 
 
 
@@ -1340,6 +1412,25 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_loadImages__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_eventListeners__WEBPACK_IMPORTED_MODULE_3__.showNewTodoForm)();
+
+const presentYear = new Date().getFullYear();
+const presentMonth = (new Date().getMonth() + 1).toString().padStart(2, "0");
+const presentDay = new Date().getDate().toString().padStart(2, "0");
+
+document.querySelector(
+  "#date"
+).min = `${presentYear}-${presentMonth}-${presentDay}`;
+document.querySelector(
+  "#edit-date"
+).min = `${presentYear}-${presentMonth}-${presentDay}`;
+
+if ((0,_localStorage__WEBPACK_IMPORTED_MODULE_4__["default"])("localStorage")) {
+  //   alert("local storage is available");
+  //   const storedProject = localStorage.getItem("TodoList");
+  //   console.log(JSON.parse(storedProject));
+} else {
+  alert("local storage is not available");
+}
 
 })();
 

@@ -3,6 +3,7 @@ import {
   createNewTodo,
   displayTodo,
   displayProjectList,
+  storeProjectLocalStorage,
 } from "./logics";
 import { allProjectsArray } from "./logics";
 
@@ -63,6 +64,10 @@ const showNewTodoForm = function () {
     createNewTodo(currentProject, title, description, due_date, priority);
     // display new todo on screen
     displayTodo(currentProject);
+
+    // store the project in local storage //
+    storeProjectLocalStorage(currentProject);
+    // fklmf;ldmf;amf;dlfmd;lf //
   });
   cancelNewTaskBtn.addEventListener("click", function () {
     addNewTodoForm.classList.toggle("hide");
@@ -88,6 +93,10 @@ const showNewTodoForm = function () {
     if (addTaskBtn.classList.contains("hide")) {
       addTaskBtn.classList.remove("hide");
     }
+
+    // store the todo in local storage //
+    storeProjectLocalStorage(currentProject);
+    // fklmf;ldmf;amf;dlfmd;lf //
   });
   // change active current project on screen and project itself
   projectsConatiner.addEventListener("click", function (e) {
