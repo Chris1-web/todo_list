@@ -1,8 +1,8 @@
 import "./styles/styles.css";
 import loadImages from "./loadImages";
-import { displayTodo } from "./logics";
 import { showNewTodoForm } from "./eventListeners";
 import storageAvailable from "./localStorage";
+import loadContent from "./loadContent";
 
 loadImages();
 showNewTodoForm();
@@ -19,9 +19,7 @@ document.querySelector(
 ).min = `${presentYear}-${presentMonth}-${presentDay}`;
 
 if (storageAvailable("localStorage")) {
-  //   alert("local storage is available");
-  //   const storedProject = localStorage.getItem("TodoList");
-  //   console.log(JSON.parse(storedProject));
+  loadContent();
 } else {
   alert("local storage is not available");
 }

@@ -2,7 +2,6 @@ import Project from "./project";
 import { projectListHTML } from "./UIView";
 
 const allProjectsArray = [];
-const storedProjectAndTasksArray = [];
 
 const displayProjectList = function () {
   // clear current HTML
@@ -24,41 +23,31 @@ const createProject = function (projectName = "Welcome") {
   const newProject = Project(projectName);
   allProjectsArray.push(newProject);
   displayProjectList();
-  // // // // // // // // // To be removed // // // // // // // // // // // // //
-  // localStorage.setItem("TodoList", JSON.stringify(allProjectsArray));
-  // // // // // // // // //// // // // // // // // // // // // // // // // // //
   return newProject;
 };
 
-const storeProjectLocalStorage = function (currentProject) {
-  // create a copy of current project
-  const projectCopy = Object.assign({}, currentProject);
-  // get all project tasks
-  projectCopy.localTodo = projectCopy.getAllTasks();
-  console.log(projectCopy);
-  // check if current project exist
-  const currentTodoIndex = storedProjectAndTasksArray
-    .map((project) => project.projectId)
-    .indexOf(projectCopy.projectId);
-  // if it exist replace it in the array else create a new copy to be put into array
-  if (currentTodoIndex !== -1) {
-    storedProjectAndTasksArray[currentTodoIndex] = projectCopy;
-  } else {
-    storedProjectAndTasksArray.push(projectCopy);
-  }
-  // store as json in local storage
-  localStorage.setItem("TodoList", JSON.stringify(storedProjectAndTasksArray));
-  console.log(storedProjectAndTasksArray);
+const storeProject = function (chosenProject) {
+  localStorage.setItem(chosenProject.projectId, JSON.stringify(chosenProject));
 };
 
-const removeTodoFromLocalStorage = function (currentProject) {
-  const projectIndex = storedProjectAndTasksArray
-    .map((project) => project.projectId)
-    .indexOf(currentProject.projectId);
-  storedProjectAndTasksArray.splice(projectIndex - 1, 1);
-  console.log(projectIndex);
-  console.log(storedProjectAndTasksArray);
-  localStorage.setItem("TodoList", JSON.stringify(storedProjectAndTasksArray));
+const storeTodo = function (currentProject) {
+  // if current project is not saved in local storage already, save it and update
+  if (!localStorage.getItem(currentProject.projectId)) {
+    storeProject(currentProject);
+    const getProject = localStorage.getItem(currentProject.projectId);
+    const result = JSON.parse(getProject);
+    result.task = currentProject.getAllTasks();
+    localStorage.setItem(currentProject.projectId, JSON.stringify(result));
+  } else {
+    console.log("The proejct is in local storage");
+    const getCurrentProject = localStorage.getItem(currentProject.projectId);
+    const currentProjectResult = JSON.parse(getCurrentProject);
+    currentProjectResult.task = currentProject.getAllTasks();
+    localStorage.setItem(
+      currentProject.projectId,
+      JSON.stringify(currentProjectResult)
+    );
+  }
 };
 
 const createNewTodo = function (
@@ -84,12 +73,45 @@ const displayTodo = function (project) {
   projectContainer.listProjectTask();
 };
 
+const deleteTodoFromStore = function (currentProject, clickedCardId) {
+  //get current project from localStorage and parse it
+  const getProjectFromStorage = localStorage.getItem(currentProject.projectId);
+  const parsedProject = JSON.parse(getProjectFromStorage);
+  // return an array without clicked(deleted) todo
+  const getClickedTask = parsedProject.task.filter(
+    (task) => task.todoId !== clickedCardId
+  );
+  // set the localStorage's task to the returned tasks array and replace in localStorage
+  parsedProject.task = getClickedTask;
+  localStorage.setItem(currentProject.projectId, JSON.stringify(parsedProject));
+};
+
+const updateTodoAtStore = function (currentProject, todo) {
+  // get current project from localStorage and parse it
+  const getProjectFromStorage = localStorage.getItem(currentProject.projectId);
+  const parsedProject = JSON.parse(getProjectFromStorage);
+  // get index of todo (with ID) from parsed data
+  const currentCardIndex = parsedProject.task
+    .map((task) => task.todoId)
+    .indexOf(todo.todoId);
+  // replace old todo with new Todo and replace it in localStorage
+  parsedProject.task[currentCardIndex] = todo;
+  localStorage.setItem(currentProject.projectId, JSON.stringify(parsedProject));
+};
+
+const deleteProjectFromStore = function (projectId) {
+  localStorage.removeItem(projectId);
+};
+
 export {
   createNewTodo,
   createProject,
   displayTodo,
   allProjectsArray,
-  storeProjectLocalStorage,
   displayProjectList,
-  removeTodoFromLocalStorage,
+  storeProject,
+  storeTodo,
+  deleteProjectFromStore,
+  deleteTodoFromStore,
+  updateTodoAtStore,
 };

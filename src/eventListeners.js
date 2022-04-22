@@ -3,8 +3,11 @@ import {
   createNewTodo,
   displayTodo,
   displayProjectList,
-  storeProjectLocalStorage,
-  removeTodoFromLocalStorage,
+  storeProject,
+  storeTodo,
+  deleteProjectFromStore,
+  deleteTodoFromStore,
+  updateTodoAtStore,
 } from "./logics";
 import { allProjectsArray } from "./logics";
 
@@ -20,22 +23,7 @@ const todoCardContainer = document.querySelector(".todo-cards");
 
 /************************** default example project *****************************/
 let currentProject = createProject("Welcome"); //default project is welcome
-// createNewTodo(
-//   currentProject,
-//   "charge my phone",
-//   "I need to charge my phone as soon as the light comes on",
-//   "02/2022",
-//   "low"
-// );
-// createNewTodo(
-//   currentProject,
-//   "call a friend",
-//   "Need to call a friend to catch up with old times",
-//   "02/2023",
-//   "high"
-// );
-// displayTodo(currentProject);
-
+// storeProject(currentProject);
 /************************** default example project *****************************/
 
 const getCurrentCard = function (e) {
@@ -48,6 +36,7 @@ const showNewTodoForm = function () {
     addNewTodoForm.classList.toggle("hide");
     addTaskBtn.classList.add("hide");
   });
+  // create new todo
   addNewTodoForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const title = document.querySelector("#title").value.trim();
@@ -65,9 +54,8 @@ const showNewTodoForm = function () {
     createNewTodo(currentProject, title, description, due_date, priority);
     // display new todo on screen
     displayTodo(currentProject);
-
     // store the project in local storage //
-    storeProjectLocalStorage(currentProject);
+    storeTodo(currentProject);
     // fklmf;ldmf;amf;dlfmd;lf //
   });
   cancelNewTaskBtn.addEventListener("click", function () {
@@ -94,10 +82,7 @@ const showNewTodoForm = function () {
     if (addTaskBtn.classList.contains("hide")) {
       addTaskBtn.classList.remove("hide");
     }
-
-    // store the todo in local storage //
-    storeProjectLocalStorage(currentProject);
-    // fklmf;ldmf;amf;dlfmd;lf //
+    storeProject(currentProject);
   });
   // change active current project on screen and project itself
   projectsConatiner.addEventListener("click", function (e) {
@@ -133,7 +118,7 @@ const showNewTodoForm = function () {
     if (allProjectTasks.lenght === 0) {
       addTaskBtn.classList.remove("hide");
     }
-    storeProjectLocalStorage(currentProject);
+    deleteTodoFromStore(currentProject, clickedCardId);
   });
   // delete project button event listener
   projectsConatiner.addEventListener("click", function (e) {
@@ -143,6 +128,8 @@ const showNewTodoForm = function () {
       .map((project) => project.projectId)
       .indexOf(clickedProject);
     allProjectsArray.splice(clickedProjectIndex, 1);
+    // send project ID to be delete as parameter
+    deleteProjectFromStore(clickedProject);
     displayProjectList();
     const firstProject = projectsConatiner.firstElementChild;
     if (firstProject) {
@@ -152,10 +139,6 @@ const showNewTodoForm = function () {
       addTaskBtn.classList.add("hide");
       addNewProjectBtn.click();
     }
-    // delete project from storedProjectAndTasksArray array
-    storeProjectLocalStorage(currentProject);
-    removeTodoFromLocalStorage(currentProject);
-    // not storeProjectLocalStorage(currentProject);
   });
   // edit todo button event listener
   let cardTodoId;
@@ -183,6 +166,7 @@ const showNewTodoForm = function () {
     addTaskBtn.classList.add("hide");
     editTodoForm.classList.remove("hide");
   });
+  // edit todo
   editTodoForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const newTitle = document.querySelector("#edit-title").value.trim();
@@ -206,7 +190,8 @@ const showNewTodoForm = function () {
     document.querySelector("#edit-date").value = "";
     document.querySelector("#edit-priority-select").value = "";
     editTodoForm.classList.add("hide");
+    updateTodoAtStore(currentProject, getTodo);
   });
 };
 
-export { showNewTodoForm };
+export { showNewTodoForm, currentProject };
