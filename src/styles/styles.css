@@ -17,8 +17,32 @@ html {
 
 body {
   font-family: "Comfortaa", cursive;
-  /* background-color: var(--primary-background-color); */
-  /* color: white; */
+}
+
+.right-side-navigation ul {
+  display: flex;
+  gap: 2rem;
+}
+.right-side-navigation ul li {
+  display: flex;
+  gap: 1rem;
+}
+
+.red-circle {
+  background-color: red;
+  color: red;
+  border-radius: 50%;
+}
+
+.green-circle {
+  background-color: green;
+  color: green;
+  border-radius: 50%;
+}
+.yellow-circle {
+  background-color: yellow;
+  color: yellow;
+  border-radius: 50%;
 }
 
 ul {
